@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        .layer {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        .abs {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 4;
+        }
+        .abs2 {
+            width: 100px;
+            height: 100px;
+            background-color: #33ff00;
+
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+            z-index: 3;
+        }
+        .abs3 {
+            width: 100px;
+            height: 100px;
+            background-color: #0026ff;
+
+            position: absolute;
+            left: 80px;
+            bottom: 80px;
+            z-index: 2;
+        }
+        .fix {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 5;
+        }
+        .fix2 {
+            width: 100px;
+            height: 100px;
+            background-color: #a200ff;
+
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="layer">
+        <div class="abs"></div>
+        <div class="abs2"></div>
+        <div class="abs3"></div>
+    </div>
+    <div class="fix"></div>
+    <div class="fix2"></div>
+</body>
+</html>
