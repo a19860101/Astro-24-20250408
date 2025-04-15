@@ -1,0 +1,8 @@
+---
+const {data, url} = Astro.props
+---
+<div class="card">
+    <h2>{data.title}</h2>
+    <div>{data.pubDate.slice(0,10)}</div>
+    <a href={url}>繼續閱讀</a>
+</div>

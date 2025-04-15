@@ -1,6 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Card from "../../components/Card.astro";
+const allPosts = Object.values(import.meta.glob('./posts/*.md',{eager: true}))
 ---
-<BaseLayout>
-    <h1>Blog</h1>
+<BaseLayout pageTitle="Blog">
+    <h1>Blog 123</h1>
+    {
+        allPosts.map( (post:any) => 
+            <Card data={post.frontmatter} url={post.url}/>
+        )
+    }
 </BaseLayout>
