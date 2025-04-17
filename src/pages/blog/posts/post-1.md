@@ -4,6 +4,9 @@ title: 文章標題
 author: John
 pubDate: 2025-04-15
 description: 這是第一篇文章測試
+hero:
+    src: https://picsum.photos/id/34/800/600
+    alt: https://picsum.photos/id/34/800/600
 ---
 # 我是標題一
 ## 我是標題二

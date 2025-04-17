@@ -4,6 +4,9 @@ title: 今年最大筆違約交割！「美債ETF」爆2565萬元 本月第四�
 author: 陳依旻｜Yahoo財經特派記者
 pubDate: 2025-04-15
 description: 這是第二篇文章測試
+hero:
+    src: https://picsum.photos/id/40/800/600
+    alt: https://picsum.photos/id/40/800/600
 ---
 
 韭菜翻車連環爆！永豐天母通報中信美國公債20年（00795B）發生違約交割2565萬元，為今年以來櫃買中心第五起違約交割，也是本月第四起，更是今年金額最大的個案。
