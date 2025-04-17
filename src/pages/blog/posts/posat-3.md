@@ -7,6 +7,7 @@ description: 這是三篇文章測試
 hero:
     src: https://picsum.photos/id/31/800/600
     alt: https://picsum.photos/id/31/800/600
+tags: ['測試']
 ---
 
 第三篇

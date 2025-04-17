@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+export function getStaticPaths(){
+    const allPosts = Object.values(import.meta.glob('../blog/posts/*.md',{eager: true}))
+    return [
+        {params: {tag: 'astro'},props:{posts: allPosts}},
+        {params: {tag: '測試'},props:{posts: allPosts}},
+        {params: {tag: '未知的首爾'},props:{posts: allPosts}}
+    ]
+}
+const {tag} = Astro.params
+const {posts} = Astro.props
+---
+<BaseLayout>
+    <h1>{tag}</h1>
+    
+    <div>
+        {
+            posts.map((post:any)=><div>{post.frontmatter.title}</div>)
+        }
+    </div>
+</BaseLayout>

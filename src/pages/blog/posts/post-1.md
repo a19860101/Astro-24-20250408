@@ -7,6 +7,7 @@ description: 這是第一篇文章測試
 hero:
     src: https://picsum.photos/id/34/800/600
     alt: https://picsum.photos/id/34/800/600
+tags: ['astro','測試']
 ---
 # 我是標題一
 ## 我是標題二
