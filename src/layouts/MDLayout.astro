@@ -3,23 +3,16 @@ import BaseLayout from "./BaseLayout.astro";
 const {frontmatter} = Astro.props
 ---
 <BaseLayout>
-    <article>
-        <h1>{frontmatter.title}</h1>
-        <div>{frontmatter.author}</div>
-        <div>發布日期:{frontmatter.pubDate}</div>
-        <div>
+    <article class="w-200 mx-auto my-5">
+        <h1 class="text-2xl font-bold">{frontmatter.title}</h1>
+        <div class="text-sm text-slate-500">{frontmatter.author}</div>
+        <div class="text-sm text-slate-500">發布日期:{frontmatter.pubDate}</div>
+        <hr class="my-5">
+        <div class="leading-8">
             <slot />
         </div>
-        <a href="/blog">文章列表</a>
+        <a href="/blog"class="bg-amber-300 px-4 py-2 text-sm inline-block rounded-lg hover:bg-amber-200 duration-500">文章列表</a>
     </article>
 </BaseLayout> 
 <style>
-    article {
-        width: 800px;
-        margin: auto;
-        line-height: 1.7;
-        p {
-            margin-bottom: 30px;
-        }
-    }
 </style>
