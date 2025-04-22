@@ -2,17 +2,28 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 export function getStaticPaths(){
     const allPosts = Object.values(import.meta.glob('../blog/posts/*.md',{eager: true}))
-    return [
-        {params: {tag: 'astro'},props:{posts: allPosts}},
-        {params: {tag: '測試'},props:{posts: allPosts}},
-        {params: {tag: '未知的首爾'},props:{posts: allPosts}}
-    ]
+    // const uniqueTags = [...new Set(allPosts.map((post:any) => post.frontmatter.tags).flat())]
+    const uniqueTags = Array.from(new Set(allPosts.map((post:any) => post.frontmatter.tags).flat()))
+    // return [
+    //     {params: {tag: 'astro'},props:{posts: allPosts}},
+    //     {params: {tag: '測試'},props:{posts: allPosts}},
+    //     {params: {tag: '未知的首爾'},props:{posts: allPosts}}
+    // ]
+    return uniqueTags.map((tag:any)=>{
+        const filterPosts = allPosts.filter((post:any)=>post.frontmatter.tags.includes(tag))
+        return {
+            // params: {tag: tag},
+            params: {tag},
+            props: {posts: filterPosts}
+        }
+    })
+
 }
 const {tag} = Astro.params
 const {posts} = Astro.props
 ---
 <BaseLayout>
-    <h1>{tag}</h1>
+    <h1>標籤:{tag}</h1>
     
     <div>
         {

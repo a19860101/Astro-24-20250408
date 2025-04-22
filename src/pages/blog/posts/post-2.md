@@ -7,7 +7,7 @@ description: 這是第二篇文章測試
 hero:
     src: https://picsum.photos/id/40/800/600
     alt: https://picsum.photos/id/40/800/600
-tags: ['美債','ETF','違約交割']
+tags: ['美債','ETF','違約交割','astro']
 ---
 
 韭菜翻車連環爆！永豐天母通報中信美國公債20年（00795B）發生違約交割2565萬元，為今年以來櫃買中心第五起違約交割，也是本月第四起，更是今年金額最大的個案。

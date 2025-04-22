@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ary = [
+            ['astro','測試'],
+            ['美債','ETF','違約交割','astro'],
+            ['朴寶英','未知的首爾','韓劇','astro'],
+            ['測試']
+        ];
+
+        // 將陣列去除巢狀
+        const ary_flat = ary.flat()
+        console.log(ary_flat)
+        
+        // 去除重複資料
+        const ary_set = new Set(ary_flat)
+        console.log(ary_set)
+
+        // 將set轉換陣列array
+        // const ary_final = Array.from(ary_set)
+        const ary_final = [...ary_set]
+        console.log(ary_final)
+
+
+        const result = [...new Set(ary.flat())]
+        console.log(result)
+
+</script>
+</body>
+</html>
