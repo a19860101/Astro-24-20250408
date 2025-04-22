@@ -6,6 +6,8 @@ const {data, url} = Astro.props
         <img src={data.hero.src} alt="" class="w-full h-full object-cover">
     </div>
     <h2 class="text-xl font-bold text-fuchsia-800">{data.title.slice(0,20)}...</h2>
+    <!-- <div class="text-slate-500">{data.tags.join(', ')}</div> -->
+
     <div class="text-sm text-slate-400">{data.pubDate.slice(0,10)}</div>
     <a href={url} class="bg-amber-300 px-4 py-2 text-sm inline-block rounded-lg hover:bg-amber-200 duration-500">繼續閱讀</a>
 </div>
