@@ -2,7 +2,7 @@
 layout: ../../../layouts/MDLayout.astro
 title: 文章標題
 author: John
-pubDate: 2025-04-15
+pubDate: 2025-04-12
 description: 這是第一篇文章測試
 hero:
     src: https://picsum.photos/id/34/800/600
