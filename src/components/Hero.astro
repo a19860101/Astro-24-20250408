@@ -1,5 +1,10 @@
-<header>
-    <img src="https:picsum.photos/id/40/800/600" alt="">
+---
+import { fade } from "astro:transitions";
+---
+
+<!-- <header  transition:animate="fade"> -->
+<header  transition:animate={fade({duration: '3s'})}>
+    <img src="/images/cat.jpg" alt=""> 
 </header>
 <style>
 	header {

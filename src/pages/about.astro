@@ -1,14 +1,15 @@
 ---
+import { slide } from "astro:transitions";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 <BaseLayout pageTitle="About">
     <div class="w-200 mx-auto grid grid-cols-2 items-center gap-8 pt-10">
-        <div>
+        <div   transition:animate={slide({duration: '1s'})}>
             <div class="aspect-square rounded-full overflow-hidden">
                 <img src="https://picsum.photos/id/349/800/600" alt="" class="w-full h-full object-cover">
             </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4"  transition:animate={slide({duration: '1s'})}>
             <h2 class="text-2xl font-bold">About me</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus unde velit cumque eos ipsum porro laboriosam ipsam, natus esse alias!
